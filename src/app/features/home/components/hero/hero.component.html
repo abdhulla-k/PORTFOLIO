@@ -1,0 +1,23 @@
+<div class="h-screen w-screen flex flex-col items-start justify-end overflow-hidden">
+    <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-[#9A9A9A] to-[#BBBBBB] text-[500px] tracking-[-1%] leading-[100%] font-johmuria transform translate-y-[40%] uppercase">Abdhulla K</h1>
+    
+    <div class="relative">
+        @for(hilite of hilights(); track $index; let mainIndex = $index) {
+            <h1 
+                [class]="{'absolute': mainIndex !== currentIndex}"
+                class="text-transparent bg-clip-text bg-gradient-to-r from-[#9A9A9A] to-[#BBBBBB] text-[200px]  leading-[100%] font-johmuria ">
+                @for(word of getText(mainIndex); track $index; let index = $index) {
+                    @for(spn of word; track $index) {
+                        <span 
+                            class="opacity-0"
+                            [class]="'text-spn' + mainIndex"
+                        >{{ spn }}</span>
+                    }
+    
+                    <!-- Add space between words --> 
+                    <span>&nbsp;</span>
+                }
+            </h1>
+        }
+    </div>
+</div>

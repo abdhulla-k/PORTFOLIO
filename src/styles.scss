@@ -1,5 +1,12 @@
 @use "tailwindcss";
 
+// Enable angular material icons
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+h1, p, a {
+    font-family: 'Jomhuria', cursive;
+}
+
 .max-w-max-limit {
     max-width: 1600px;
 }

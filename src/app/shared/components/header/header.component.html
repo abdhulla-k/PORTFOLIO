@@ -1,5 +1,5 @@
 <app-section-layout>
-    <div class="flex w-full justify-between">
+    <div class="flex w-full justify-between md:px-10 md:pt-10 lg:pt-0">
         
         
         <div class="w-full flex text-white justify-between items-start md:items-center gap-10">
@@ -24,7 +24,7 @@
             <!-- Navigation elements and hamberger menu -->
             <div class="flex gap-10">
                 @for (navElement of navElements; track $index) {
-                    <div class="hidden md:block">
+                    <div class="hidden lg:block">
                         <a 
                             class="text-3xl text-[#D7D7D7] leading-[300%] font-light"
                             [routerLink]="[navElement.url]"
@@ -35,9 +35,9 @@
                 }
             </div>
 
-            <div class="pt-5 md:hidden">
-                <div class="h-[1px] w-[22vw] bg-[white] mb-1 transform -translate-x-3"></div>
-                <div class="h-[1px] w-[22vw] bg-[white]"></div>
+            <div class="pt-5 md:pt-0 lg:hidden">
+                <div class="h-[1px] w-[22vw] sm:w-[10vw] bg-[white] mb-1 transform -translate-x-3"></div>
+                <div class="h-[1px] w-[22vw] sm:w-[10vw] bg-[white]"></div>
             </div>
         </div>
     </div>

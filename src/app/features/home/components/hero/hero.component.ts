@@ -15,7 +15,8 @@ export class HeroComponent implements AfterViewInit {
     "UI/UX DESIGNER",
     "MEAVN STACK DEVELOPER"
   ])
-  currentIndex = 0;
+  currentIndex = -1;
+  isInitialAnimation = 0;
 
   ngAfterViewInit() {
     this.startAnimation();
@@ -29,6 +30,8 @@ export class HeroComponent implements AfterViewInit {
     this.addText().then(() => {
       setTimeout(() => {
         this.removeText().then(() => {
+            // set a value that never be an index value of hilights
+            this.isInitialAnimation = -2;
           this.startAnimation();
         })
       }, 3000)

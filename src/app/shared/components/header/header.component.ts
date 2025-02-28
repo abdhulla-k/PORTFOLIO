@@ -17,18 +17,18 @@ export class HeaderComponent {
             name: "Home",
             url: "/home"
         },
-        {
-            name: "Works",
-            url: "/works"
-        },
-        {
-            name: "About",
-            url: "/about"
-        },
-        {
-            name: "Blog",
-            url: "/blog"
-        },
+        // {
+        //     name: "Works",
+        //     url: "/works"
+        // },
+        // {
+        //     name: "About",
+        //     url: "/about"
+        // },
+        // {
+        //     name: "Blog",
+        //     url: "/blog"
+        // },
         {
             name: "Gallery",
             url: "/gallery"

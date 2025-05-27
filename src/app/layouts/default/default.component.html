@@ -1,7 +1,12 @@
-<div class="flex flex-col justify-center max-w-screen items-center min-h-screen bg-gradient-to-tr from-black from-5% to-[#1C3575] h-screen max-h-screen overflow-y-scroll"> 
-    <app-header class="fixed top-0 w-full z-40"/>
+<div
+  class="flex flex-col max-w-screen items-center min-h-screen h-screen max-h-screen overflow-y-scroll bg-[#FFFCF3]"
+>
+  <app-header />
+  <app-infinit-scroll-x class="w-full" />
 
-    <div class="max-w-max-limit max-w-screen  flex flex-col justify-center items-center">
-        <ng-content></ng-content>
-    </div>
+  <div
+    class="max-w-max-limit max-w-screen flex flex-col justify-center items-center"
+  >
+    <ng-content></ng-content>
+  </div>
 </div>

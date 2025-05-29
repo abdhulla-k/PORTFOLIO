@@ -1,5 +1,14 @@
-<div class="w-full border-y flex gap-2">
-  @for (skill of skills; track $index) {
-  <p class="font-judson leading-[170%]">{{ skill }} &nbsp;&lt;/&gt;&nbsp;</p>
-  }
+<div class="w-full border-y">
+  <div class="scroller">
+    <ul class="tag-list scroller_inner flex gap-5">
+      @for (item of items; track $index) {
+      <li class="font-judson leading-[170%] whitespace-nowrap">
+        {{ item }}
+        <ng-container *ngIf="$index < items.length - 1">
+          &nbsp;&lt;/&gt;&nbsp;
+        </ng-container>
+      </li>
+      }
+    </ul>
+  </div>
 </div>

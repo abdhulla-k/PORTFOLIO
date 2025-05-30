@@ -12,7 +12,7 @@ import { InfinitScrollXComponent } from "../../shared/components/infinit-scroll-
         HeroComponent,
         DefaultComponent,
         AboutComponent,
-        InfinitScrollXComponent
+
     ],
 })
 export class HomeComponent {

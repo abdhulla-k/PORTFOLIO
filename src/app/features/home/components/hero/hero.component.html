@@ -1,146 +1,59 @@
-<div>
-  <div class="newspaper-content-area">
-    <header>
-      <h1>The Portfolio Chronicle</h1>
-      <div class="subhead">
-        A Journal of Design & Development &mdash; By Abdhulla &mdash; Est. MMXIV
-      </div>
-    </header>
+<app-section-layout>
+    <div class="h-full w-full flex py-20 ">
+        <div class="w-2/4 flex flex-col gap-16 justify-between">
+            <div>
+                <h3 class="text-[70px] font-Judson font-bold leading-[100%]">I AM ABDHULLA</h3>
+                <p class="text-xl">A passionate Software engineer willing to help you with</p>
+            </div>
 
-    <hr class="section-divider" />
+            <div class="flex flex-col gap-5" >
+                @for (skill of skills(); track $index) {
+                    <div class="flex gap-5" #skillItem>
+                        <div class="h-full w-5 bg-black/20 skill-bg-bar"></div>
+                        <p class="font-bold text-[50px] text-black/20 leading-[100%]">{{ skill }}</p>
+                    </div>
+                }
 
-    <main>
-      <h2 class="main-headline">I AM ABDHULLA</h2>
-      <p class="article-subheadline">
-        A passionate Software engineer willing to help you with:
-      </p>
-
-      <p>
-        Welcome to my digital dispatch, a curated collection of projects,
-        insights, and explorations from the world of web development and user
-        interface design. This portfolio, styled as a classic newspaper, aims to
-        present my work in a format that is both nostalgic and engaging. My core
-        philosophy revolves around building experiences that are not only
-        functional and efficient but also aesthetically pleasing and intuitive
-        for the end-user. I believe that good design is about problem-solving,
-        and elegant code is its most articulate expression.
-      </p>
-      <p>
-        Throughout my career, I've had the privilege of working on a diverse
-        range of projects, from dynamic single-page applications to robust
-        e-commerce platforms. Each undertaking has been an opportunity to learn,
-        adapt, and push the boundaries of what's possible on the web. The tools
-        and technologies may evolve, but the fundamental principles of clear
-        communication, user-centric design, and meticulous craftsmanship remain
-        constant. This "publication" serves as a testament to that enduring
-        commitment to quality and innovation in the digital realm.
-      </p>
-
-      <hr class="section-divider" />
-      <h3 class="section-title">Special Report: The Engineer's Workshop</h3>
-      <div class="news-section-grid">
-        <div class="grid-text-col-1">
-          <p>
-            Dateline-Code Alley: Master developer Abdhulla K forges resilient,
-            scale-ready web enterprises and fleet-footed mobile contraptions,
-            each riveted with the precision of a Victorian craftsman. Within his
-            workshop of Generative-AI wonders, he orchestrates workflows and
-            LLM-powered engines that converse, predict, and innovate like
-            clockwork automatons.
-          </p>
-          <p>
-            Ambitious apprentices will find in Abdhulla a seasoned mentor,
-            dispensing brass-tacks guidance and hard-won insight to shepherd
-            them through the marvels of modern codecraft. His approach ensures
-            the final product is not just a collection of disparate features,
-            but a cohesive, intuitive, and ultimately enjoyable experience for
-            everyone who interacts with it.
-          </p>
+                <!-- Contact button -->
+                <div class="bg-black/20 w-min text-white">
+                    <p class="leading-[120%] text-[50px] font-bold text-black px-10 pb-2">contact</p>
+                </div>
+            </div>
+            
         </div>
 
-        <img
-          src="https://placehold.co/400x300/A09080/3A302F?text=Abdhulla+at+Work"
-          alt="Abdhulla K at work in his digital workshop"
-          class="grid-news-image"
-          onerror="this.onerror=null;this.src='https://placehold.co/400x300/C0B8A8/5A4A3A?text=Image+Missing';"
-        />
+        <div class="w-2/4 flex flex-col gap-5">
+            <div class="grid grid-cols-5 test-filter">
+                <img src="/js.svg" alt="javascript" class=" w-full">
+                <img src="/vscode.svg" alt="vscode" class="w-full">
+                <img src="/vue.svg" alt="vuejs" class="w-full">
+                <img src="/nodejs.svg" alt="nodejs" class="w-full">
+                <img src="/angular.svg" alt="angular" class="w-full">
+                <img src="/figma.svg" alt="figma" class="w-full">
+                <img src="/python.svg" alt="python" class="w-full">
+                <img src="/docker.svg" alt="docker" class="w-full">
+                <img src="/ts.svg" alt="typescript" class="w-full">
+                <img src="/git.svg" alt="git" class="w-full">
+                <img src="/mongodb.svg" alt="mongodb" class="w-full">
+                <img src="/langchain.svg" alt="langchain" class="w-full">
+                <img src="/django.svg" alt="django" class="w-full">
+                <img src="/aws.svg" alt="aws" class="w-full">
+                <img src="/nest.svg" alt="nestjs" class="w-full">
+            </div>
 
-        <div class="grid-text-col-4">
-          <p>
-            His skill set encompasses a broad spectrum of modern web
-            technologies, including:
-            <strong
-              >Gen AI Workflow, UI/UX Designing, Mobile App Development,
-              Software Development, and Mentorship.</strong
-            >
-            He is proficient in front-end frameworks such as React and Vue.js,
-            adept at crafting responsive layouts with HTML5 and CSS3 (including
-            preprocessors like SASS), and experienced in JavaScript (ES6+) for
-            building interactive functionalities.
-          </p>
-          <p>
-            On the back-end, he has experience with Node.js and Python, along
-            with database management using SQL and NoSQL solutions. He is also
-            well-versed in version control with Git, agile methodologies, and
-            deploying applications to various cloud platforms, ensuring robust
-            and scalable solutions.
-          </p>
+            <div class="text-xl font-Judson columns-3  gap-5 xl:gap-8  2xl:gap-10">
+                <p class="text-xl">
+                    As a developer, I specialize in comprehensive software development, 
+                    including UI/UX design and building powerful, scalable web solutions. 
+                    My work in Generative AI involves creating and streamlining systems that 
+                    leverage Large Language Models for smarter interactions, accurate predictions, 
+                    and new innovations. I also serve as an experienced mentor for upcoming 
+                    developers, offering straightforward advice and proven strategies to help 
+                    them excel in modern coding.
+                </p>
+                
+            </div>
         </div>
 
-        <div class="grid-text-center-bottom">
-          <p>
-            Beyond the purely technical aspects, Abdhulla places a strong
-            emphasis on user experience (UX) research, detailed wireframing,
-            interactive prototyping, and rigorous usability testing. He firmly
-            believes that a successful digital product is born from a deep and
-            empathetic understanding of its users' needs, goals, and behaviors.
-            This holistic approach ensures that the final product is not just a
-            collection of disparate features, but a cohesive, intuitive, and
-            ultimately enjoyable experience for everyone who interacts with it.
-          </p>
-          <p>
-            This special report highlights the innovative spirit and meticulous
-            craftsmanship that defines Abdhulla's contributions to the digital
-            realm. His dedication to quality and continuous learning sets a
-            benchmark for aspiring developers and designers alike.
-          </p>
-        </div>
-      </div>
-
-      <hr class="article-end" />
-      <h3 class="section-title">
-        Recent Dispatches: Selected Works & Case Studies
-      </h3>
-      <p>
-        In this section, you would typically find more detailed "articles" or
-        case studies about specific projects. For instance, an article might
-        delve into the challenges and solutions for "Project Minerva," detailing
-        the design process, technologies used, and outcomes achieved. Another
-        piece could focus on a different project, perhaps highlighting a unique
-        UX solution or a complex back-end architecture. Each entry would serve
-        as a mini-narrative, showcasing skills and problem-solving abilities,
-        offering readers a comprehensive view of my capabilities.
-      </p>
-      <p>
-        Consider this a placeholder for future "editions" where more of my work
-        will be chronicled in depth. The aim is to provide not just a list of
-        accomplishments, but a deeper insight into the thought process and
-        craftsmanship behind each project. Stay tuned for more updates from the
-        digital press room, as new stories of innovation and design excellence
-        unfold on these pages!
-      </p>
-
-      <div class="article-meta">Published: May XXIX, MMXV</div>
-
-      <div class="contact-section">
-        <h3>FOLLOW ME</h3>
-        <div class="contact-links">
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">GitHub</a>
-          <a href="#">CONTACT</a>
-        </div>
-      </div>
-    </main>
-  </div>
-</div>
+    </div>
+</app-section-layout>

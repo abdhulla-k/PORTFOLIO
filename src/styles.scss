@@ -74,8 +74,13 @@ body::before {
     box-sizing: inherit;
 }
 
-h1, p, a {
-    font-family: 'Jomhuria', cursive;
+p {
+    text-shadow: 0.2px 0.2px 0.5px rgba(0, 0, 0, 0.05);
+    text-align: justify;
+}
+
+.test-filter {
+    filter:  saturate(1.5) brightness(1.8);
 }
 
 .main-title {
@@ -86,10 +91,11 @@ h1, p, a {
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.1;
+    text-align: 'justify';
 }
 
 .max-w-max-limit {
-    max-width: 1750px;
+    max-width: 1500px;
 }
 
 .font-johmuria {

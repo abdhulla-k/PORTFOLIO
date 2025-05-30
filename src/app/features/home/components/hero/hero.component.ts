@@ -1,116 +1,88 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, Renderer2, signal, ViewChildren } from '@angular/core';
 
 import { gsap } from "gsap";
+import { SectionLayoutComponent } from "../../../../layouts/section-layout/section-layout.component";
 
 @Component({
-  selector: 'app-hero',
-  imports: [CommonModule],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+    selector: 'app-hero',
+    imports: [CommonModule, SectionLayoutComponent],
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements AfterViewInit {
-  hilights = signal([
-    "FULL STACK DEVELOPER",
-    "UI/UX DESIGNER",
-    "MEAVN STACK DEVELOPER"
-  ])
-  currentIndex = -1;
-  isInitialAnimation = 0;
+    skills = signal([
+        "Software Development",
+        "UI/UX Designing",
+        "Mobile App Development",
+        "Gen AI Workflow",
+        "Mentorship"
+    ])
+    @ViewChildren('skillItem', { read: ElementRef }) skillItems!: QueryList<ElementRef>;;
+    selectedIndex: number = 0;
+    previousSelectedIndex: number = -1;
 
-  ngAfterViewInit() {
-    this.startAnimation();
-  }
-
-  getText(index: number) {
-    return this.hilights()[index].split(' ').map(word => word.split(''));
-  }
-
-  startAnimation() {
-    this.addText().then(() => {
-      setTimeout(() => {
-        this.removeText().then(() => {
-            // set a value that never be an index value of hilights
-            this.isInitialAnimation = -2;
-          this.startAnimation();
-        })
-      }, 3000)
-    })
-  }
-
-  addText() {
-    this.currentIndex = this.findNextIndex(this.currentIndex);
-
-    const pr = new Promise((resolve, reject) => {
-      let tl = gsap.timeline({
-        paused: true,
-        onComplete: () => resolve(true),
-        onErrorCaptured: (error: any) => reject({ status: "error", error })
-      })
-
-      try {
-        tl.fromTo(`.text-spn${this.currentIndex}`, 
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            stagger:{
-              each: 0.1,
-              from: 'start'
-            },
-            duration: 1,
-            ease: 'power2.inOut'
-          }
-        );
-      } catch (error) {
-        reject(error);
-      }
-      
-      tl.play();
-    })
-
-    return pr;
-  }
-
-  removeText() {
-    const pr = new Promise((resolve, reject) => {
-      let tl = gsap.timeline({ 
-        paused: true,
-        onComplete: () => resolve(true),
-        onErrorCaptured: (error: any) => reject({ status: "error", error })
-      });
-
-      try {
-        tl.fromTo(`.text-spn${this.currentIndex}`, 
-          {
-            opacity: 1,
-          },
-          {
-            opacity: 0,
-            stagger:{
-              each: 0.1,
-              from: 'random'
-            },
-            duration: 1,
-            ease: 'power2.inOut'
-          }
-        );
-      } catch (error) {
-        reject(error);
-      }
-      
-      tl.play();
-    })
-    
-    return pr;
-  }
-  
-  findNextIndex(index: number = 0) {
-    if (index === this.hilights().length - 1) {
-      return 0
+    ngAfterViewInit() {
+        this.selectSkill(this.selectedIndex);
     }
 
-    return index + 1
-  }
+    selectSkill(index: number) {
+        if(!this.skillItems.length) {
+            return;
+        }
+        const element = this.skillItems.get(index);
+        if(element) {
+            const bar = element.nativeElement.childNodes[0];
+            const text = element.nativeElement.childNodes[1];
+            let preBar: any = null;
+            let preText: any = null;
+            const tl = gsap.timeline({
+                paused: true,
+                onComplete: () => {
+                    setTimeout(() => {
+                        this.previousSelectedIndex = index;
+                        this.selectSkill(this.getIndex(index))
+                    }, 2000)
+                }
+            })
+
+            if(this.previousSelectedIndex >= 0) {
+                const preElement = this.skillItems.get(this.previousSelectedIndex);
+                preBar = preElement?.nativeElement.childNodes[0]
+                preText = preElement?.nativeElement.childNodes[1]
+            }
+
+            tl.to(bar, {
+                background: 'black',
+                duration: 0.8
+            })
+            .to(text, {
+                color: "black",
+                duration: 0.8
+            }, "<")
+            
+            if(preBar && preText) {
+                tl.to(preBar, {
+                    background: "rgba(0, 0, 0, 0.2)",
+                    duration: 0.8
+                }, "<")
+                .to(preText, {
+                    color: "rgba(0, 0, 0, 0.2)",
+                    duration: 0.8
+                }, "<")
+            }
+            
+
+            tl.play()
+        }
+    }
+
+    getIndex(index: number) {
+        if(index < this.skillItems.length - 1) {
+            return ++index;
+        } else {
+            return 0;
+        }
+    }
+
 }

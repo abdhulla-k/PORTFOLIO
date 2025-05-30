@@ -1,12 +1,14 @@
 <div class="w-full border-y overflow-hidden">
   <div class="scroller">
-    <ul class="tag-list scroller_inner flex gap-8">
+    <ul class="tag-list scroller_inner flex gap-5 lg:gap-8">
       @for (item of items; track $index) {
       <li class="font-judson leading-[170%] whitespace-nowrap">
-        {{ item }}
-        <ng-container *ngIf="$index < items.length - 1">
-          &nbsp;&lt;/&gt;&nbsp;
-        </ng-container>
+        <p class="text-[12px] leading-[125%] md:text-base">
+          {{ item }}
+          <ng-container *ngIf="$index < items.length - 1">
+            &nbsp;&lt;/&gt;&nbsp;
+          </ng-container>
+        </p>
       </li>
       }
     </ul>

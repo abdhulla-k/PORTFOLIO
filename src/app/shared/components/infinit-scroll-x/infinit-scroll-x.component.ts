@@ -10,12 +10,8 @@ import { CommonModule } from '@angular/common'; // Required for @for (or ngFor)
 })
 export class InfinitScrollXComponent implements OnInit, AfterViewInit {
     @Input() items: string[] = [
-        'Angular', 'TypeScript', 'Vue.js', 'Node.js', 'Express',
-        'Generative AI', 'Python', 'AWS', 'Docker', 'Git',
-        'SQL', 'MongoDB', 'Product Development', 'System Design', 'CI/CD',
-        'Angular', 'TypeScript', 'Vue.js', 'Node.js', 'Express',
-        'Generative AI', 'Python', 'AWS', 'Docker', 'Git',
-        'SQL', 'MongoDB', 'Product Development', 'System Design', 'CI/CD'
+        'Software Engineer', 'Angular', 'Django', 'UI/UX Designer', 'Figma', 'MEAN Stack Developer', 'Node.js', 'Express',
+        'Generative AI', 'Python', 'LangChain', 'AWS', 'Docker', 'Git', 'Nuxt.js', 'Full Stack Developer'
     ];
     @Input() duration: number = 20; // Animation duration in seconds (adjust for speed)
     @Input() itemGap: string = '1rem'; // Gap between items, e.g., '1rem', '20px'

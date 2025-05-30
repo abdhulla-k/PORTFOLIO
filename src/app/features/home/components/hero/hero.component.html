@@ -1,59 +1,64 @@
 <app-section-layout>
-    <div class="h-full w-full flex py-20 ">
-        <div class="w-2/4 flex flex-col gap-16 justify-between">
-            <div>
-                <h3 class="text-[70px] font-Judson font-bold leading-[100%]">I AM ABDHULLA</h3>
-                <p class="text-xl">A passionate Software engineer willing to help you with</p>
-            </div>
+  <div class="h-full w-full flex py-20">
+    <div class="w-2/4 flex flex-col gap-16 justify-between">
+      <div>
+        <h3 class="text-[70px] font-Judson font-bold leading-[100%]">
+          I AM ABDHULLA
+        </h3>
+        <p class="text-xl">
+          A passionate Software engineer willing to help you with
+        </p>
+      </div>
 
-            <div class="flex flex-col gap-5" >
-                @for (skill of skills(); track $index) {
-                    <div class="flex gap-5" #skillItem>
-                        <div class="h-full w-5 bg-black/20 skill-bg-bar"></div>
-                        <p class="font-bold text-[50px] text-black/20 leading-[100%]">{{ skill }}</p>
-                    </div>
-                }
-
-                <!-- Contact button -->
-                <div class="bg-black/20 w-min text-white">
-                    <p class="leading-[120%] text-[50px] font-bold text-black px-10 pb-2">contact</p>
-                </div>
-            </div>
-            
+      <div class="flex flex-col gap-5">
+        @for (skill of skills(); track $index) {
+        <div class="flex gap-5" #skillItem>
+          <div class="h-full w-5 bg-black/20 skill-bg-bar"></div>
+          <p class="font-bold text-[50px] text-black/20 leading-[100%]">
+            {{ skill }}
+          </p>
         </div>
+        }
 
-        <div class="w-2/4 flex flex-col gap-5">
-            <div class="grid grid-cols-5 test-filter">
-                <img src="/js.svg" alt="javascript" class=" w-full">
-                <img src="/vscode.svg" alt="vscode" class="w-full">
-                <img src="/vue.svg" alt="vuejs" class="w-full">
-                <img src="/nodejs.svg" alt="nodejs" class="w-full">
-                <img src="/angular.svg" alt="angular" class="w-full">
-                <img src="/figma.svg" alt="figma" class="w-full">
-                <img src="/python.svg" alt="python" class="w-full">
-                <img src="/docker.svg" alt="docker" class="w-full">
-                <img src="/ts.svg" alt="typescript" class="w-full">
-                <img src="/git.svg" alt="git" class="w-full">
-                <img src="/mongodb.svg" alt="mongodb" class="w-full">
-                <img src="/langchain.svg" alt="langchain" class="w-full">
-                <img src="/django.svg" alt="django" class="w-full">
-                <img src="/aws.svg" alt="aws" class="w-full">
-                <img src="/nest.svg" alt="nestjs" class="w-full">
-            </div>
-
-            <div class="text-xl font-Judson columns-3  gap-5 xl:gap-8  2xl:gap-10">
-                <p class="text-xl">
-                    As a developer, I specialize in comprehensive software development, 
-                    including UI/UX design and building powerful, scalable web solutions. 
-                    My work in Generative AI involves creating and streamlining systems that 
-                    leverage Large Language Models for smarter interactions, accurate predictions, 
-                    and new innovations. I also serve as an experienced mentor for upcoming 
-                    developers, offering straightforward advice and proven strategies to help 
-                    them excel in modern coding.
-                </p>
-                
-            </div>
+        <!-- Contact button -->
+        <div class="bg-black/20 w-min text-white">
+          <p class="leading-[120%] text-[50px] font-bold text-black px-10 pb-2">
+            contact
+          </p>
         </div>
-
+      </div>
     </div>
+
+    <div class="w-2/4 flex flex-col gap-5">
+      <div class="grid grid-cols-5 test-filter">
+        <img src="/js.svg" alt="javascript" class="w-full" />
+        <img src="/vscode.svg" alt="vscode" class="w-full" />
+        <img src="/vue.svg" alt="vuejs" class="w-full" />
+        <img src="/nodejs.svg" alt="nodejs" class="w-full" />
+        <img src="/angular.svg" alt="angular" class="w-full" />
+        <img src="/figma.svg" alt="figma" class="w-full" />
+        <img src="/python.svg" alt="python" class="w-full" />
+        <img src="/docker.svg" alt="docker" class="w-full" />
+        <img src="/ts.svg" alt="typescript" class="w-full" />
+        <img src="/git.svg" alt="git" class="w-full" />
+        <img src="/mongodb.svg" alt="mongodb" class="w-full" />
+        <img src="/langchain.svg" alt="langchain" class="w-full" />
+        <img src="/django.svg" alt="django" class="w-full" />
+        <img src="/aws.svg" alt="aws" class="w-full" />
+        <img src="/nest.svg" alt="nestjs" class="w-full" />
+      </div>
+
+      <div class="text-xl font-Judson columns-3 gap-5 xl:gap-6">
+        <p class="text-xl">
+          As a developer, I specialize in comprehensive software development,
+          including UI/UX design and building powerful, scalable web solutions.
+          My work in Generative AI involves creating and streamlining systems
+          that leverage Large Language Models for smarter interactions, accurate
+          predictions, and new innovations. I also serve as an experienced
+          mentor for upcoming developers, offering straightforward advice and
+          proven strategies to help them excel in modern coding.
+        </p>
+      </div>
+    </div>
+  </div>
 </app-section-layout>

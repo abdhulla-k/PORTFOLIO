@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 import { HeroComponent } from "./components/hero/hero.component";
 import { DefaultComponent } from "../../layouts/default/default.component";
 import { AboutComponent } from "./components/about/about.component";
-import { InfinitScrollXComponent } from "../../shared/components/infinit-scroll-x/infinit-scroll-x.component";
+import { ProjectsComponent } from "./components/projects/projects.component";
 
 @Component({
     selector: 'app-home',
@@ -12,7 +12,7 @@ import { InfinitScrollXComponent } from "../../shared/components/infinit-scroll-
         HeroComponent,
         DefaultComponent,
         AboutComponent,
-
+        ProjectsComponent
     ],
 })
 export class HomeComponent {

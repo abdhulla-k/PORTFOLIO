@@ -11,6 +11,7 @@ export const routes: Routes = [
     },
     {
         path: '',
-        component: HomeComponent
+        title: "Abdhulla K | Software Engineer",
+        component: HomeComponent,
     },
 ];

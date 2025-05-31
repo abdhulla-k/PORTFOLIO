@@ -1,0 +1,23 @@
+<svg width="124" height="98" viewBox="0 0 124 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_118_1038)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56.233 21C51.8388 21 48.2767 24.4491 48.2767 28.7037V34.037H62.0472V35.5185H42.1565C37.7623 35.5185 34.2002 38.9676 34.2002 43.2222L34.2002 54.7778C34.2002 59.0324 37.7623 62.4815 42.1565 62.4815H46.7466V55.9629C46.7466 51.7083 50.3088 48.2592 54.7029 48.2592H69.3914C73.1095 48.2592 76.1237 45.3408 76.1237 41.7407V28.7037C76.1237 24.4491 72.5615 21 68.1674 21H56.233ZM54.3969 30.4815C55.918 30.4815 57.151 29.2876 57.151 27.8148C57.151 26.3421 55.918 25.1481 54.3969 25.1481C52.8759 25.1481 51.6428 26.3421 51.6428 27.8148C51.6428 29.2876 52.8759 30.4815 54.3969 30.4815Z" fill="url(#paint0_linear_118_1038)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M68.1671 77C72.5612 77 76.1233 73.551 76.1233 69.2963V63.963L62.3529 63.963L62.3529 62.4815L82.2436 62.4815C86.6377 62.4815 90.1998 59.0324 90.1998 54.7778V43.2223C90.1998 38.9676 86.6377 35.5186 82.2436 35.5186L77.6534 35.5186V42.0371C77.6534 46.2917 74.0912 49.7408 69.6971 49.7408L55.0086 49.7408C51.2905 49.7408 48.2764 52.6592 48.2764 56.2593L48.2764 69.2963C48.2764 73.5509 51.8385 77 56.2326 77H68.1671ZM70.0031 67.5185C68.4821 67.5185 67.249 68.7124 67.249 70.1852C67.249 71.658 68.4821 72.8519 70.0031 72.8519C71.5242 72.8519 72.7572 71.658 72.7572 70.1852C72.7572 68.7124 71.5242 67.5185 70.0031 67.5185Z" fill="url(#paint1_linear_118_1038)"/>
+</g>
+<defs>
+<filter id="filter0_g_118_1038" x="-3.2002" y="-3.66666" width="130.8" height="105.333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.011111111380159855 0.011111111380159855" numOctaves="3" seed="6875" />
+<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_118_1038">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+<linearGradient id="paint0_linear_118_1038" x1="55.1619" y1="21" x2="55.1619" y2="62.4815" gradientUnits="userSpaceOnUse">
+<stop offset="1" stop-color="#262626"/>
+</linearGradient>
+<linearGradient id="paint1_linear_118_1038" x1="69.2381" y1="35.5186" x2="69.2381" y2="77" gradientUnits="userSpaceOnUse">
+<stop offset="1" stop-color="#BBBBBB"/>
+</linearGradient>
+</defs>
+</svg>

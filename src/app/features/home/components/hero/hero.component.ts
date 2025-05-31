@@ -11,6 +11,7 @@ import { SectionLayoutComponent } from "../../../../layouts/section-layout/secti
     styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements AfterViewInit {
+    @ViewChildren('skillItem', { read: ElementRef }) skillItems!: QueryList<ElementRef>;
     skills = signal([
         "Software Development",
         "UI/UX Designing",
@@ -18,7 +19,6 @@ export class HeroComponent implements AfterViewInit {
         "Gen AI Workflow",
         "Mentorship"
     ])
-    @ViewChildren('skillItem', { read: ElementRef }) skillItems!: QueryList<ElementRef>;;
     selectedIndex: number = 0;
     previousSelectedIndex: number = -1;
 
@@ -27,11 +27,11 @@ export class HeroComponent implements AfterViewInit {
     }
 
     selectSkill(index: number) {
-        if(!this.skillItems.length) {
+        if (!this.skillItems.length) {
             return;
         }
         const element = this.skillItems.get(index);
-        if(element) {
+        if (element) {
             const bar = element.nativeElement.childNodes[0];
             const text = element.nativeElement.childNodes[1];
             let preBar: any = null;
@@ -46,7 +46,7 @@ export class HeroComponent implements AfterViewInit {
                 }
             })
 
-            if(this.previousSelectedIndex >= 0) {
+            if (this.previousSelectedIndex >= 0) {
                 const preElement = this.skillItems.get(this.previousSelectedIndex);
                 preBar = preElement?.nativeElement.childNodes[0]
                 preText = preElement?.nativeElement.childNodes[1]
@@ -56,29 +56,29 @@ export class HeroComponent implements AfterViewInit {
                 background: 'black',
                 duration: 0.8
             })
-            .to(text, {
-                color: "black",
-                duration: 0.8
-            }, "<")
-            
-            if(preBar && preText) {
+                .to(text, {
+                    color: "black",
+                    duration: 0.8
+                }, "<")
+
+            if (preBar && preText) {
                 tl.to(preBar, {
                     background: "rgba(0, 0, 0, 0.2)",
                     duration: 0.8
                 }, "<")
-                .to(preText, {
-                    color: "rgba(0, 0, 0, 0.2)",
-                    duration: 0.8
-                }, "<")
+                    .to(preText, {
+                        color: "rgba(0, 0, 0, 0.2)",
+                        duration: 0.8
+                    }, "<")
             }
-            
+
 
             tl.play()
         }
     }
 
     getIndex(index: number) {
-        if(index < this.skillItems.length - 1) {
+        if (index < this.skillItems.length - 1) {
             return ++index;
         } else {
             return 0;

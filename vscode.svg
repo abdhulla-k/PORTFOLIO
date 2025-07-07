@@ -1,0 +1,30 @@
+<svg width="132" height="102" viewBox="0 0 132 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_118_1030)">
+<rect x="5.2998" y="0.5" width="121.8" height="96.3333" stroke="#D8D8D8"/>
+<g clip-path="url(#clip0_118_1030)">
+<path d="M75.1092 25.7184C75.1092 24.1528 73.3562 24.1528 72.5771 24.3485C73.6679 23.4874 74.9469 23.6961 75.4014 23.9571L85.9345 29.1218C86.9382 29.614 87.5748 30.6379 87.5748 31.76V65.7366C87.5748 66.8737 86.9212 67.9086 85.8972 68.3928L75.9857 73.0793C75.304 73.3729 73.8237 74.097 72.5771 73.0793C74.1353 73.3729 74.9794 72.2639 75.1092 71.5137V25.7184Z" fill="#272727"/>
+<path d="M72.7039 24.3202C73.5308 24.1568 75.1096 24.2325 75.1096 25.7184V37.4135L43.175 61.5722C42.6168 61.9945 41.8313 61.9244 41.3558 61.4099L38.0645 57.8485C37.5489 57.2906 37.585 56.4172 38.1448 55.9042L72.5775 24.3484L72.7039 24.3202Z" fill="url(#paint0_linear_118_1030)"/>
+<path d="M75.1096 60.0143L43.175 35.8556C42.6168 35.4333 41.8313 35.5033 41.3558 36.0178L38.0645 39.5792C37.5489 40.1372 37.585 41.0105 38.1448 41.5236L72.5775 73.0793V73.0793C74.1357 73.3729 74.9797 72.2639 75.1096 71.5137V60.0143Z" fill="url(#paint1_linear_118_1030)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_g_118_1030" x="0.799805" y="-4" width="130.8" height="105.333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.052631579339504242 0.052631579339504242" numOctaves="3" seed="8128" />
+<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_118_1030">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+<linearGradient id="paint0_linear_118_1030" x1="75.1096" y1="30.0239" x2="39.5201" y2="59.8975" gradientUnits="userSpaceOnUse">
+<stop offset="1" stop-color="#B3B3B3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_118_1030" x1="39.7579" y1="37.9501" x2="75.2474" y2="67.3353" gradientUnits="userSpaceOnUse">
+<stop offset="1" stop-color="#C7C7C7"/>
+</linearGradient>
+<clipPath id="clip0_118_1030">
+<rect width="57" height="57" fill="white" transform="translate(37.7002 20.1667)"/>
+</clipPath>
+</defs>
+</svg>
